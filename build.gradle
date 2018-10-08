@@ -1,0 +1,16 @@
+
+plugins {
+    id "java"
+    id 'org.springframework.boot' version '2.0.5.RELEASE'
+}
+apply plugin: 'io.spring.dependency-management'
+
+repositories {
+    mavenCentral()
+}
+dependencies {
+    compile 'org.springframework.boot:spring-boot-starter-web'
+    testCompile("org.springframework.boot:spring-boot-starter-test")
+
+}
+
