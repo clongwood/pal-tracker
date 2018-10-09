@@ -77,12 +77,7 @@ public class TimeEntry {
         if (this == o) return true;
         if (!(o instanceof TimeEntry)) return false;
         TimeEntry timeEntry = (TimeEntry) o;
-        return count == timeEntry.count &&
-                getId() == timeEntry.getId() &&
-                getProjectId() == timeEntry.getProjectId() &&
-                getUserId() == timeEntry.getUserId() &&
-                getHours() == timeEntry.getHours() &&
-                Objects.equals(getDate(), timeEntry.getDate());
+        return getId() == timeEntry.getId();
     }
 
     @Override
