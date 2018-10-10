@@ -1,9 +1,12 @@
 package io.pivotal.pal.tracker;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import java.time.LocalDate;
 import java.util.Objects;
 
 public class TimeEntry {
+
 
     public TimeEntry(long id, long projectId, long userId, LocalDate date, int hours){
         this.id = id;
@@ -18,7 +21,7 @@ public class TimeEntry {
         this.userId = userId;
         this.date = date;
         this.hours = hours;
-        this.id = ++count;
+      //  this.id = ++count;
     }
 
     public TimeEntry(){
