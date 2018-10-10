@@ -84,4 +84,15 @@ public class TimeEntry {
     public LocalDate getDate() {
         return date;
     }
+
+    @Override
+    public String toString() {
+        return "TimeEntry{" +
+                "id=" + id +
+                ", projectId=" + projectId +
+                ", userId=" + userId +
+                ", date=" + date +
+                ", hours=" + hours +
+                '}';
+    }
 }

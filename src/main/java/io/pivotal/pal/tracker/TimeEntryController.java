@@ -4,11 +4,13 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
 @RestController
+@RequestMapping("/time-entries")
 public class TimeEntryController {
 
     private final TimeEntryRepository repository;
@@ -34,8 +36,7 @@ public class TimeEntryController {
     }
     @GetMapping("/list")
     public ResponseEntity<List<TimeEntry>> list() {
-
-        return null; // return new ResponseEntity<List<TimeEntry>>(list, HttpStatus.OK);
+        return new ResponseEntity<List<TimeEntry>>(repository.list(), HttpStatus.OK);
     }
     @PostMapping("/update")
     public ResponseEntity update(long id, TimeEntry expected) {
