@@ -1,7 +1,5 @@
 package io.pivotal.pal.tracker;
 
-import org.springframework.context.annotation.Bean;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
