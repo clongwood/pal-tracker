@@ -23,7 +23,8 @@ public class InMemoryTimeEntryRepository implements TimeEntryRepository {
     }
 
     public TimeEntry update(long id, TimeEntry timeEntry){
-        return new TimeEntry();
+        timeEntry.setId(id);
+        return timeEntry;
 
     }
 
