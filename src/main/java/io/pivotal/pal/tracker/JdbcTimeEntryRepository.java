@@ -91,7 +91,6 @@ public class JdbcTimeEntryRepository implements TimeEntryRepository {
     public List<TimeEntry> list(){
         String sql = "Select * from time_entries";
         List<TimeEntry> list = jdbcTemplate.query(sql, mapper);
-        //  return new ArrayList<TimeEntry>(timeEntryMap.values());
         return list;
 
     }
