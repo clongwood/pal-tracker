@@ -85,4 +85,16 @@ public class TimeEntry {
     public int hashCode() {
         return Objects.hash(count, getId(), getProjectId(), getUserId(), getDate(), getHours());
     }
+
+    @Override
+    public String toString() {
+        return "TimeEntry{" +
+                "count=" + count +
+                ", id=" + id +
+                ", projectId=" + projectId +
+                ", userId=" + userId +
+                ", date=" + date +
+                ", hours=" + hours +
+                '}';
+    }
 }
